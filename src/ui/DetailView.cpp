@@ -28,6 +28,7 @@
 #include "git/Repository.h"
 #include "git/Signature.h"
 #include "git/TagRef.h"
+#include "trace.h"
 #include <QAbstractTextDocumentLayout>
 #include <QApplication>
 #include <QClipboard>
@@ -1109,27 +1110,32 @@ private:
     int partial = 0;
     int conflicted = 0;
     int count = mDiff.count();
-    git::Index index = mDiff.index();
-    for (int i = 0; i < count; ++i) {
-      QString name = mDiff.name(i);
-      switch (index.isStaged(name)) {
-        case git::Index::Disabled:
-        case git::Index::Unstaged:
-          break;
+    {
+#if PERFTRACE_DETAILVIEW
+      PERFTRACE("");
+#endif
+      git::Index index = mDiff.index();
+      for (int i = 0; i < count; ++i) {
+        QString name = mDiff.name(i);
+        switch (index.isStaged(name)) {
+          case git::Index::Disabled:
+          case git::Index::Unstaged:
+            break;
 
-        case git::Index::PartiallyStaged:
-          list.append(QFileInfo(name).fileName());
-          ++partial;
-          break;
+          case git::Index::PartiallyStaged:
+            list.append(QFileInfo(name).fileName());
+            ++partial;
+            break;
 
-        case git::Index::Staged:
-          list.append(QFileInfo(name).fileName());
-          ++staged;
-          break;
+          case git::Index::Staged:
+            list.append(QFileInfo(name).fileName());
+            ++staged;
+            break;
 
-        case git::Index::Conflicted:
-          ++conflicted;
-          break;
+          case git::Index::Conflicted:
+            ++conflicted;
+            break;
+        }
       }
     }
 
