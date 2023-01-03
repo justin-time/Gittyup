@@ -79,7 +79,7 @@ theme['badge']     = {
     head           = '#52A500', -- a bolder color to indicate the HEAD
     notification   = '#8C2026',  -- the color of toolbar notifications badges
     modified       = '#91973a', -- (yellow) the color of the badge when the file is modified
-    added          = '#394734', -- (green) the color of the badge when the file was newly added
+    added          = '#1B7A16', -- (green) the color of the badge when the file was newly added
     deleted        = '#5e3638' -- (red) the color of the badge when the file was deleted
   }
 }
