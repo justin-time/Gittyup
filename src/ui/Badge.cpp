@@ -144,10 +144,16 @@ void Badge::paint(QPainter *painter, const Label &label, const QRect &rect,
     state = Theme::BadgeState::Conflicted;
   } else if (label.bold) {
     state = Theme::BadgeState::Head;
+  } else if (label.text == 'M') {
+    state = Theme::BadgeState::Modified;
+  } else if (label.text == 'A') {
+    state = Theme::BadgeState::Added;
+  } else if (label.text == 'D') {
+    state = Theme::BadgeState::Deleted;
   }
 
-  QColor fore = theme->badge(Theme::BadgeRole::Foreground, state);
-  QColor back = theme->badge(Theme::BadgeRole::Background, state);
+  const QColor fore = theme->badge(Theme::BadgeRole::Foreground, state);
+  const QColor back = theme->badge(Theme::BadgeRole::Background, state);
 
   painter->setBrush(back);
   painter->setPen(Qt::NoPen);

@@ -354,6 +354,15 @@ QColor CustomTheme::badge(BadgeRole role, BadgeState state) {
     case BadgeState::Notification:
       stateKey = "notification";
       break;
+    case BadgeState::Modified:
+      stateKey = "modified";
+      break;
+    case BadgeState::Added:
+      stateKey = "added";
+      break;
+    case BadgeState::Deleted:
+      stateKey = "deleted";
+      break;
   }
 
   QVariantMap badge = mMap.value("badge").toMap();

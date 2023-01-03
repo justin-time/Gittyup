@@ -22,7 +22,16 @@ class Theme {
 public:
   enum class BadgeRole { Foreground, Background };
 
-  enum class BadgeState { Normal, Selected, Conflicted, Head, Notification };
+  enum class BadgeState {
+    Normal,
+    Selected,
+    Conflicted,
+    Head,
+    Notification,
+    Modified,
+    Added,
+    Deleted
+  };
 
   enum class CommitEditor { SpellError, SpellIgnore, LengthWarning };
 
