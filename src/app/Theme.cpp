@@ -126,7 +126,7 @@ QColor Theme::badge(BadgeRole role, BadgeState state) {
         case BadgeState::Modified:
           return mDark ? "#91973A" : "#FFEEDB";
         case BadgeState::Added:
-          return mDark ? "#1B7A16" : "#DCFFDC";
+          return mDark ? "#394734" : "#DCFFDC";
         case BadgeState::Deleted:
           return mDark ? "#5E3638" : "#FFDCDC";
       }
