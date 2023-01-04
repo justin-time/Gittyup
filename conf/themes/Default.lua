@@ -69,7 +69,7 @@ theme['commits']   = {
 -- { normal, selected, conflicted, head, notification }
 theme['badge']     = {
   foreground       = {
-    normal         = '#FFFFFF',
+    normal         = '#000000',
     selected       = '#6C6C6C'
   },
   background       = {
