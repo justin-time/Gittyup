@@ -123,8 +123,16 @@ QColor Theme::badge(BadgeRole role, BadgeState state) {
 
         case BadgeState::Notification:
           return mDark ? "#8C2026" : "#FF0000";
+        case BadgeState::Modified:
+          return mDark ? "#91973A" : "#FFEEDB";
+        case BadgeState::Added:
+          return mDark ? "#1B7A16" : "#DCFFDC";
+        case BadgeState::Deleted:
+          return mDark ? "#5E3638" : "#FFDCDC";
       }
   }
+  assert(false);
+  return QStringLiteral("");
 }
 
 QList<QColor> Theme::branchTopologyEdges() {

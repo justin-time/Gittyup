@@ -78,9 +78,9 @@ theme['badge']     = {
     conflicted     = '#DA2ADA', -- the color of conflicted items
     head           = '#52A500', -- a bolder color to indicate the HEAD
     notification   = '#8C2026',  -- the color of toolbar notifications badges
-    modified       = '#91973a', -- (yellow) the color of the badge when the file is modified
+    modified       = '#91973A', -- (yellow) the color of the badge when the file is modified
     added          = '#1B7A16', -- (green) the color of the badge when the file was newly added
-    deleted        = '#5e3638' -- (red) the color of the badge when the file was deleted
+    deleted        = '#5E3638' -- (red) the color of the badge when the file was deleted
   }
 }
 
