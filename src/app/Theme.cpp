@@ -129,6 +129,8 @@ QColor Theme::badge(BadgeRole role, BadgeState state) {
           return mDark ? "#394734" : "#DCFFDC";
         case BadgeState::Deleted:
           return mDark ? "#5E3638" : "#FFDCDC";
+        case BadgeState::Untracked:
+          return mDark ? "#2A4944" : "#C7FFF6";
       }
   }
   assert(false);

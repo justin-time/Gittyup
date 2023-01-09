@@ -30,7 +30,8 @@ public:
     Notification,
     Modified,
     Added,
-    Deleted
+    Deleted,
+    Untracked
   };
 
   enum class CommitEditor { SpellError, SpellIgnore, LengthWarning };

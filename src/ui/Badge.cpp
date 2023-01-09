@@ -150,6 +150,8 @@ void Badge::paint(QPainter *painter, const Label &label, const QRect &rect,
     state = Theme::BadgeState::Added;
   } else if (label.text == 'D') {
     state = Theme::BadgeState::Deleted;
+  } else if (label.text == '?') {
+    state = Theme::BadgeState::Untracked;
   }
 
   const QColor fore = theme->badge(Theme::BadgeRole::Foreground, state);
