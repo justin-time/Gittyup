@@ -366,6 +366,9 @@ QColor CustomTheme::badge(BadgeRole role, BadgeState state) {
     case BadgeState::Untracked:
       stateKey = "untracked";
       break;
+    case BadgeState::Renamed:
+      stateKey = "renamed";
+      break;
   }
 
   QVariantMap badge = mMap.value("badge").toMap();

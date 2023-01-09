@@ -81,7 +81,8 @@ theme['badge']     = {
     modified       = '#FFEEDB', -- (yellow) the color of the badge when the file is modified
     added          = '#DCFFDC', -- (green) the color of the badge when the file was newly added
     deleted        = '#FFDCDC', -- (red) the color of the badge when the file was deleted
-	untracked	   = '#C7FFF6' -- (blue) the color of the badge when the file is untracked
+	untracked	   = '#d9ead2', -- (green blue) the color of the badge when the file is untracked
+	renamed		   = '#d2e8fc'  -- (blue) the color of the badge when the file is renamed
   }
 }
 

@@ -152,6 +152,8 @@ void Badge::paint(QPainter *painter, const Label &label, const QRect &rect,
     state = Theme::BadgeState::Deleted;
   } else if (label.text == '?') {
     state = Theme::BadgeState::Untracked;
+  } else if (label.text == 'R') {
+    state = Theme::BadgeState::Renamed;
   }
 
   const QColor fore = theme->badge(Theme::BadgeRole::Foreground, state);

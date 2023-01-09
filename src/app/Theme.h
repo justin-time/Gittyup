@@ -31,7 +31,8 @@ public:
     Modified,
     Added,
     Deleted,
-    Untracked
+    Untracked,
+    Renamed
   };
 
   enum class CommitEditor { SpellError, SpellIgnore, LengthWarning };
