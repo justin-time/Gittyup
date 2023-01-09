@@ -80,7 +80,7 @@ theme['badge']     = {
     notification   = '#8C2026',  -- the color of toolbar notifications badges
     modified       = '#91973A', -- (yellow) the color of the badge when the file is modified
     added          = '#394734', -- (green) the color of the badge when the file was newly added
-    deleted        = '#5E3638' -- (red) the color of the badge when the file was deleted
+    deleted        = '#5E3638', -- (red) the color of the badge when the file was deleted
 	untracked	   = '#2A4944' -- (blue) the color of the badge when the file is untracked
   }
 }
